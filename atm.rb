@@ -1,10 +1,14 @@
 require_relative "user"
 class Atm
-	def initialize(name, pin, balance)
-		@name = name 
-		@pin = pin.to_f
-		@balance = balance
-		@logged = false
+	def initialize(pin)
+		@pin = pin
+	end
+	if @pin == 1771
+		John = User.new("John", 1771, 1250)
+	elsif @pin == 0220
+		Sarah = User.new("Sarah", 0220, 9000)
+	elsif @pin == 9999
+		Karl = User.new("Karl", 9999, 7)
 	end
 	def login
 		puts "Please input you PIN"
