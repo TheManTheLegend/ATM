@@ -4,13 +4,6 @@ class Atm
 		@pin = pin
 		@person = "nan"
 	end
-	if @pin == 1771
-		@person = User.new("John", 1771, 1250)
-	elsif @pin == 0220
-		@person = User.new("Sarah", 0220, 9000)
-	elsif @pin == 9999
-		@person = User.new("Karl", 9999, 7)
-	end
 	def login
 		puts "Please input you PIN"
 		pin = gets.to_f
@@ -24,6 +17,17 @@ class Atm
 			withdraw
 		end
 	end
+	if @pin == 1771
+		@person = User.new("John", 1771, 1250)
+	elsif @pin == 0220
+		@person = User.new("Sarah", 0220, 9000)
+	elsif @pin == 9999
+		@person = User.new("Karl", 9999, 7)
+	else
+		puts "I'm sorry that PIN does not match any users in our database, please try again."
+	end
+	
+	
 	def withdraw
 		puts "How much would you like to withdraw?"
 		with = gets.to_f
