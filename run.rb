@@ -1,4 +1,4 @@
-require_relative "atm"
+
 require_relative "user"
 require "gosu"
 
